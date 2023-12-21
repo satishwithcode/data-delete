@@ -1,0 +1,14 @@
+<?php 
+include 'connection.php' ;
+$sno=$_REQUEST['sno'];
+
+$sql="DELETE FROM blogs WHERE sno = '$sno'";
+$result=mysqli_query($con, $sql);
+
+if($result)
+{
+    // unlink("uploads/".$_FILES['image']['name']);
+    echo '<script> alert("Deleted Successfully"); document.location="blogs.php"</script>';
+}
+?>
+
